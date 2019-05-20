@@ -1,12 +1,12 @@
 Current functional version:
 
--N8731ACTRL20 for free control measurements (sweeps undergoing work)
+-PSUN8731A-CTRLv31 for free control measurements (sweeps undergoing work)
 -MeasInductance to determine coil inductance and resistance.
 
-N831ACTRL20 README:
--In current version only Free Control Mode has been tested to be functional. Sweep mode will be left unfinished for
- v2, a different implementation will be used for v3.
+PSUN8731A-CTRLv31 README:
+-In current version sweeps were removed due to being clunky and unnecessary.
 -Good for collecting freeform data
--Currently plots (manually exportable) I(V), V(t) and I(t).
+-Currently plots (manually exportable) I(V), V(t) and I(t), can be set to save all data gathered automatically to txt.
+-Main controls allow setting voltage/current limits for PSU.
 
 ... wip
