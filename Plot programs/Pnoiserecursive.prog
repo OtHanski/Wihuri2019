@@ -1,0 +1,35 @@
+reset
+
+
+do for [fn in system("dir /b")] {
+    len=strlen(fn)
+    form=substr(fn,len-3,len)
+    if (form eq ".txt") {
+        set term png
+        set linestyle 1 lt 1 lw 1.5 linecolor rgb "blue"
+
+        titl=sprintf("%s",fn)
+        set title titl noenhanced
+        unset key
+
+        set tics font ",9.5"
+        set xlabel "Frequency [Hz]"
+        set ylabel "Power [dB]
+
+        data=sprintf("%s",fn)
+        filename=sprintf("%s.png",substr(fn,0,len-4))
+        set output filename
+
+        plot data using ($1):2 with lines ls 1 title "Data"
+        unset output
+}
+}
+reset
+
+
+#j=0
+#do for [fn in system("ls")] {
+#    j=j+1; set term png
+#    set output ''.fn.'.png'
+#    plot fn with lines linecolor rgb "navy" title ''.i 
+#}
