@@ -371,7 +371,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 # Bind the socket to the port
 #server_address = ('192.168.1.20', 15000)
-server_address = (socket.socket.gethostbyname(socket.socket.gethostname()),15000)
+server_address = (socket.gethostbyname(socket.gethostname()),15000)
 #server_address = ('127.0.0.1', 15000)
 sock.bind(server_address)
 # sock.settimeout(1000)
